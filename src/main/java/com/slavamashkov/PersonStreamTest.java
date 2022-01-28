@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Main {
+public class PersonStreamTest {
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>(Arrays.asList(
                 new Person("John", 35, Person.Position.MANAGER),
