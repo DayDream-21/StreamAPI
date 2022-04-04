@@ -88,4 +88,10 @@ public class DishTest {
                 .limit(3)
                 .collect(Collectors.toList());
     }
+
+    private static List<Dish> getVegetarianDishesName(List<Dish> menu) {
+        return menu.stream()
+                .filter(Dish::isVegetarian)
+                .collect(Collectors.toList());
+    }
 }
