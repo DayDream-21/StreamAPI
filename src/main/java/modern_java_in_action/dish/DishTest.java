@@ -30,7 +30,7 @@ public class DishTest {
                 getDishesByType(menu));
 
         System.out.println("Three high caloric dish names: " +
-                getThreeHighCaloricDishNames(menu));
+                getThreeHighCaloricDishesName(menu));
     }
 
     // Code to get names of low caloric dishes (calories < 400) before Java 8
@@ -81,7 +81,7 @@ public class DishTest {
                 .collect(Collectors.groupingBy(Dish::getType));
     }
 
-    private static List<String> getThreeHighCaloricDishNames(List<Dish> menu) {
+    private static List<String> getThreeHighCaloricDishesName(List<Dish> menu) {
         return menu.stream()
                 .filter(dish -> dish.getCalories() > 400)
                 .map(Dish::getName)
