@@ -1,4 +1,4 @@
-package com.slavamashkov;
+package com.slavamashkov.person;
 
 import java.util.ArrayList;
 import java.util.Arrays;

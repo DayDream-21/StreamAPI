@@ -1,4 +1,4 @@
-package com.slavamashkov;
+package com.slavamashkov.person;
 
 public class Person {
     enum Position {
