@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class DishMatchStreamTest {
+public class MatchStream {
     public static void main(String[] args) {
         List<Dish> menu = new Dish().initializeMenu();
 

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class DishReduceStreamTest {
+public class ReduceStream {
     public static void main(String[] args) throws NoSuchMethodException {
         // Special menu is already sorted by calories
         List<Dish> specialMenu = Arrays.asList(

@@ -2,7 +2,7 @@ package modern_java_in_action.dish;
 
 import java.util.List;
 
-public class DishFoldStreamTest {
+public class FoldStream {
     public static void main(String[] args) {
         List<Dish> menu = new Dish().initializeMenu();
 

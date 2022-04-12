@@ -3,7 +3,7 @@ package modern_java_in_action.dish;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class DishStreamTest {
+public class Stream {
     public static void main(String[] args) {
         List<Dish> menu = new Dish().initializeMenu();
 
