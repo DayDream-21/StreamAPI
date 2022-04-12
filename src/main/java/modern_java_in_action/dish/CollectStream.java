@@ -1,13 +1,17 @@
 package modern_java_in_action.dish;
 
-import java.util.Comparator;
-import java.util.IntSummaryStatistics;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class CollectStream {
+    public enum CaloriesLevel {
+        DIET,
+        NORMAL,
+        FAT
+    }
+
     public static void main(String[] args) {
         List<Dish> menu = new Dish().initializeMenu();
 
@@ -35,5 +39,30 @@ public class CollectStream {
 
         int totalCaloriesReducing = menu.stream()
                 .collect(Collectors.reducing(0, Dish::getCalories, Integer::sum));
+
+        Map<Dish.Type, List<Dish>> dishesByType = menu.stream()
+                .collect(Collectors.groupingBy(Dish::getType));
+
+        System.out.println(dishesByType);
+
+        Map<CaloriesLevel, List<Dish>> dishesByCalories = menu.stream()
+                .collect(Collectors.groupingBy(dish -> {
+                    if (dish.getCalories() <= 400) {
+                        return CaloriesLevel.DIET;
+                    } else if (dish.getCalories() <= 700) {
+                        return CaloriesLevel.NORMAL;
+                    } else {
+                        return CaloriesLevel.FAT;
+                    }
+                }));
+
+        System.out.println(dishesByCalories);
+
+        Map<Dish.Type, List<Dish>> caloricDishesByType =
+                menu.stream()
+                        .collect(Collectors.groupingBy(Dish::getType,
+                                Collectors.filtering(dish -> dish.getCalories() > 500, Collectors.toList())));
+
+        System.out.println(caloricDishesByType);
     }
 }
