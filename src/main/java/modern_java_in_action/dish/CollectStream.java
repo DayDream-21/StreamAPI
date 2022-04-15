@@ -64,5 +64,30 @@ public class CollectStream {
                                 Collectors.filtering(dish -> dish.getCalories() > 500, Collectors.toList())));
 
         System.out.println(caloricDishesByType);
+
+        Map<Dish.Type, Map<CaloriesLevel, List<Dish>>> dishesByTypeCaloricLevel =
+                menu.stream().collect(
+                        Collectors.groupingBy(Dish::getType,
+                                Collectors.groupingBy(dish -> {
+                                    if (dish.getCalories() <= 400) {
+                                        return CaloriesLevel.DIET;
+                                    } else if (dish.getCalories() <= 700) {
+                                        return CaloriesLevel.NORMAL;
+                                    } else {
+                                        return CaloriesLevel.FAT;
+                                    }
+                                }))
+                );
+
+        System.out.println(dishesByTypeCaloricLevel);
+
+        Map<Dish.Type, Long> typesCount = menu.stream()
+                .collect(Collectors.groupingBy(Dish::getType, Collectors.counting()));
+
+        Map<Dish.Type, Dish> mostCaloricByType = menu.stream()
+                .collect(Collectors.groupingBy(Dish::getType,
+                        Collectors.collectingAndThen(
+                                Collectors.maxBy(Comparator.comparingInt(Dish::getCalories)),
+                                Optional::get)));
     }
 }
