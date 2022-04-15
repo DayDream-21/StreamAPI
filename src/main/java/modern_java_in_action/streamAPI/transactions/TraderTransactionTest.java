@@ -1,4 +1,4 @@
-package modern_java_in_action.transactions;
+package modern_java_in_action.streamAPI.transactions;
 
 import java.util.Arrays;
 import java.util.Comparator;

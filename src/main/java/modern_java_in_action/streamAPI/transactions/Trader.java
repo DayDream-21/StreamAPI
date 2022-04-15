@@ -1,4 +1,4 @@
-package modern_java_in_action.transactions;
+package modern_java_in_action.streamAPI.transactions;
 
 public class Trader {
     private final String name;

@@ -1,4 +1,4 @@
-package modern_java_in_action;
+package modern_java_in_action.streamAPI;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
