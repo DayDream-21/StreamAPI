@@ -1,23 +1,27 @@
 package modern_java_in_action.streamAPI.dish;
 
+import lombok.*;
+
 import java.util.Arrays;
 import java.util.List;
 
+@NoArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
+@ToString(exclude = {"vegetarian", "calories", "type"})
 public class Dish {
+    @NonNull
     private String name;
+
+    @NonNull
     private boolean vegetarian;
+
+    @NonNull
     private int calories;
+
+    @NonNull
     private Type type;
-
-    public Dish() {
-    }
-
-    public Dish(String name, boolean vegetarian, int calories, Type type) {
-        this.name = name;
-        this.vegetarian = vegetarian;
-        this.calories = calories;
-        this.type = type;
-    }
 
     public List<Dish> initializeMenu() {
         return Arrays.asList(
@@ -31,27 +35,6 @@ public class Dish {
                 new Dish("prawns",       false, 300, Dish.Type.FISH),
                 new Dish("salmon",       false, 450, Dish.Type.FISH)
         );
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public boolean isVegetarian() {
-        return vegetarian;
-    }
-
-    public int getCalories() {
-        return calories;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 
     public enum Type {
