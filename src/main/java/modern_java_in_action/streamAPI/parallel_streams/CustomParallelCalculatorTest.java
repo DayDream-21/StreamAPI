@@ -1,4 +1,4 @@
-package modern_java_in_action.streamAPI.parallel_streams.benchmark;
+package modern_java_in_action.streamAPI.parallel_streams;
 
 import modern_java_in_action.streamAPI.parallel_streams.ForkJoinSumCalculator;
 
