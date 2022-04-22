@@ -1,7 +1,7 @@
-package modern_java_in_action.streamAPI;
+package modern_java_in_action.streamAPI.sequential_streams;
 
-import modern_java_in_action.streamAPI.collector.PrimeNumbersCollector;
-import modern_java_in_action.streamAPI.dish.Dish;
+import modern_java_in_action.streamAPI.sequential_streams.collector.PrimeNumbersCollector;
+import modern_java_in_action.streamAPI.sequential_streams.dish.Dish;
 
 import java.util.Comparator;
 import java.util.List;

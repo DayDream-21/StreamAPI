@@ -1,4 +1,4 @@
-package modern_java_in_action.streamAPI;
+package modern_java_in_action.streamAPI.sequential_streams;
 
 import java.util.Arrays;
 import java.util.List;

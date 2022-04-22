@@ -1,4 +1,4 @@
-package modern_java_in_action.streamAPI.collector;
+package modern_java_in_action.streamAPI.sequential_streams.collector;
 
 import java.util.*;
 import java.util.function.*;

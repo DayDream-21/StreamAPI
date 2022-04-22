@@ -1,6 +1,6 @@
-package modern_java_in_action.streamAPI.collector;
+package modern_java_in_action.streamAPI.sequential_streams.collector;
 
-import modern_java_in_action.streamAPI.dish.Dish;
+import modern_java_in_action.streamAPI.sequential_streams.dish.Dish;
 
 import java.util.List;
 

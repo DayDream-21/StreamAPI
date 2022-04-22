@@ -1,4 +1,4 @@
-package modern_java_in_action.streamAPI.dish;
+package modern_java_in_action.streamAPI.sequential_streams.dish;
 
 import java.util.Arrays;
 import java.util.List;
